@@ -21,6 +21,7 @@
     "rules": {
         // suppress errors for missing 'import React' in files
         "react/react-in-jsx-scope": "off",
+        "global-require": 0,
         // allow jsx syntax in js files (for next.js project)
         "react/jsx-filename-extension": [
             1,
@@ -32,6 +33,12 @@
             }
         ], //should add ".ts" if typescript project
         "import/prefer-default-export": "off",
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ]
     }
 }
